@@ -1,0 +1,72 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+p,
+ul {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: lightgreen;
+}
+
+nav {
+    flex-grow: 1;
+}
+
+.link-list {
+    display: flex;
+    gap: 4rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+main {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    padding-inline: 1rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+
+
+.main-heading {
+    margin-bottom: 1rem;
+}
+@media (min-width:40rem) {
+
+    main {
+        column-gap: 2rem;
+        grid-template-columns: minmax(1rem, 1fr) minmax(20rem, 45rem) minmax(0, 20rem) minmax(1rem, 1fr);
+    }
+
+    main> :first-child {
+        grid-column: 2;
+    }
+
+    main> :last-child {
+        grid-column: 3;
+    }
+
+}
